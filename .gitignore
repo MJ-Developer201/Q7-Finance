@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
 
 # Editor directories and files
 .vscode/*
@@ -53,5 +54,5 @@ amplify/team-provider-info.json
 amplify
 
 
-aws-exports.js
+aws-exports.ts
 amplifyconfiguration.json
