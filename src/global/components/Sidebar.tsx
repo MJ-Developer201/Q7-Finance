@@ -60,7 +60,10 @@ export default function AppBarWithDrawer() {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar position="fixed" sx={{ width: "100%" }}>
+      <AppBar
+        position="fixed"
+        sx={{ width: "100%", backgroundColor: "#0F52BA", color: "white" }}
+      >
         <Toolbar>
           <IconButton
             size="large"
@@ -90,7 +93,7 @@ export default function AppBarWithDrawer() {
           "& .MuiDrawer-paper": {
             width: 250,
             boxSizing: "border-box",
-            top: "64px", // Adjust this value if your AppBar height is different
+            top: "64px",
           },
         }}
       >
@@ -103,11 +106,9 @@ export default function AppBarWithDrawer() {
           p: 3,
           ml: open ? "250px" : 0,
           transition: "margin-left 0.3s",
-          mt: "64px", // Adjust this value if your AppBar height is different
+          mt: "64px",
         }}
-      >
-        {/* Your main content goes here */}
-      </Box>
+      ></Box>
     </Box>
   );
 }

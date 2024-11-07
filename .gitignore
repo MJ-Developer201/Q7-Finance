@@ -24,6 +24,18 @@ dist-ssr
 *.sln
 *.sw?
 
+
+# Additional Amplify files to ignore
+amplify/.config/local-aws-info.json
+amplify/.config/local-env-info.json
+amplify/.config/project-config.json
+amplify/team-provider-info.json
+amplify
+
+
+aws-exports.ts
+amplifyconfiguration.json
+
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
 amplify/.config/local-*
@@ -45,14 +57,3 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
-
-# Additional Amplify files to ignore
-amplify/.config/local-aws-info.json
-amplify/.config/local-env-info.json
-amplify/.config/project-config.json
-amplify/team-provider-info.json
-amplify
-
-
-aws-exports.ts
-amplifyconfiguration.json
