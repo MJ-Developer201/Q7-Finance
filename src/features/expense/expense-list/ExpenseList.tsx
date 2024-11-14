@@ -46,43 +46,6 @@ const ExpenseList = () => {
     }
   }, [userId, apiGatewayUrl]);
 
-  const downloadJSON = () => {
-    const json = JSON.stringify(data, null, 2);
-    const blob = new Blob([json], { type: "application/json" });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.setAttribute("hidden", "");
-    a.setAttribute("href", url);
-    a.setAttribute("download", "transactions.json");
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  };
-
-  const downloadCSV = () => {
-    const csvData = [
-      ["Title", "Description", "Amount", "Type"],
-      ...data.map((transaction: any) => [
-        transaction.title,
-        transaction.description,
-        transaction.amount,
-        transaction.type,
-      ]),
-    ]
-      .map((e) => e.join(","))
-      .join("\n");
-
-    const blob = new Blob([csvData], { type: "text/csv" });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.setAttribute("hidden", "");
-    a.setAttribute("href", url);
-    a.setAttribute("download", "transactions.csv");
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  };
-
   const filteredData = data
     ? data.filter((transaction: any) =>
         filter === "all" ? true : transaction.type === filter
@@ -116,14 +79,6 @@ const ExpenseList = () => {
             <MenuItem value="expense">Expense</MenuItem>
           </Select>
         </FormControl> */}
-        {/* <Box>
-          <IconButton onClick={downloadJSON}>
-            <InsertDriveFileIcon />
-          </IconButton>
-          <IconButton onClick={downloadCSV}>
-            <DescriptionIcon />
-          </IconButton>
-        </Box> */}
       </Box>
       {filteredData && (
         <TableContainer component={Paper}>
