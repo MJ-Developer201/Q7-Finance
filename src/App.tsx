@@ -57,7 +57,7 @@ function App({ signOut }: { signOut: () => void; user: any }) {
     }
 
     fetchCurrentUser();
-  }, []); // Empty dependency array ensures this runs only once
+  }, []);
 
   return (
     <Container>

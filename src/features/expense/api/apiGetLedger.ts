@@ -13,6 +13,6 @@ export function useIncomeQuery(userId: string) {
       const response = await axios.get(`${apiUrl}/ledger/${userId}`);
       return response.data;
     },
-    enabled: !!userId, // Only run the query if userId is defined
+    enabled: !!userId,
   });
 }
