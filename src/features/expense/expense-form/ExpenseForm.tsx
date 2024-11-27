@@ -13,7 +13,7 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import { usePostIncomeRecord } from "./apiPostLedger";
+import { usePostIncomeRecord } from "../api/apiPostLedger";
 import { format } from "date-fns";
 import { AuthContext } from "../../../App";
 interface ExpenseFormProps {}

@@ -3,7 +3,6 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const apiUrl = import.meta.env.VITE_API_GATEWAY_URL || "";
 
-// Define the type for the new record
 interface LedgerRecord {
   userId: string;
   recordId: number;
